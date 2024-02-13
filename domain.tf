@@ -23,8 +23,8 @@ data "aws_iam_policy_document" "search_suggest" {
     }
 
     actions = [
-      "cloudsearch:search",
       "cloudsearch:suggest",
+      "cloudsearch:search",
     ]
   }
 }
