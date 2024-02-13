@@ -1,6 +1,6 @@
-output "domain_id" {
-  value       = aws_cloudsearch_domain.this.id
-  description = "string ||| The unique identifier for the domain"
+output "domain_arn" {
+  value       = aws_cloudsearch_domain.this.arn
+  description = "string ||| The arn for the domain"
 }
 
 output "document_endpoint" {
