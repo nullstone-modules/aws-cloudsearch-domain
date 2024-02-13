@@ -18,7 +18,7 @@ data "aws_iam_policy_document" "search_suggest" {
     effect = "Allow"
 
     principals {
-      type        = "*"
+      type        = "AWS"
       identifiers = ["*"]
     }
 
