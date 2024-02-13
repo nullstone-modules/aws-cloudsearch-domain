@@ -1,0 +1,13 @@
+org_name: Evolve
+name: aws-cloudsearch-domain
+friendly_name: CloudSearch Domain
+description: Creates an AWS CloudSearch domain
+category: datastore
+subcategory: ""
+provider_types:
+    - aws
+platform: cloudsearch
+subplatform: ""
+type: ""
+appCategories: []
+is_public: false
