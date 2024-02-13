@@ -1,5 +1,9 @@
+locals {
+  domain_name = "${var.domain_name}-${random_string.resource_suffix.result}"
+}
+
 resource "aws_cloudsearch_domain" "this" {
-  name = local.resource_name
+  name = local.domain_name
 
   scaling_parameters {
     desired_instance_type     = var.instance_type

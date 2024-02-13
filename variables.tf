@@ -1,3 +1,8 @@
+variable "domain_name" {
+  type        = string
+  description = "The name of the domain"
+}
+
 variable "instance_type" {
   type        = string
   default     = "search.small"
