@@ -35,7 +35,7 @@ resource "aws_cloudsearch_domain_service_access_policy" "this" {
 
   // For some reason, AWS takes forever to create and destroy this policy
   timeouts {
-    create = "40m"
+    update = "40m"
     delete = "40m"
   }
 }
