@@ -12,7 +12,6 @@ resource "aws_cloudsearch_domain" "this" {
   }
 }
 
-/*
 data "aws_iam_policy_document" "search_suggest" {
   statement {
     sid    = "SearchSuggest"
@@ -31,13 +30,6 @@ data "aws_iam_policy_document" "search_suggest" {
 }
 
 resource "aws_cloudsearch_domain_service_access_policy" "this" {
-  domain_name   = aws_cloudsearch_domain.this.id
+  domain_name   = aws_cloudsearch_domain.this.name
   access_policy = data.aws_iam_policy_document.search_suggest.json
-
-  // For some reason, AWS takes forever to create and destroy this policy
-  timeouts {
-    update = "40m"
-    delete = "40m"
-  }
 }
-*/
