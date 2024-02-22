@@ -30,6 +30,7 @@ data "aws_iam_policy_document" "search_suggest" {
 }
 
 resource "aws_cloudsearch_domain_service_access_policy" "this" {
-  domain_name   = aws_cloudsearch_domain.this.name
+  id            = local.domain_name
+  domain_name   = aws_cloudsearch_domain.this.id
   access_policy = data.aws_iam_policy_document.search_suggest.json
 }
