@@ -12,6 +12,7 @@ resource "aws_cloudsearch_domain" "this" {
   }
 }
 
+/*
 data "aws_iam_policy_document" "search_suggest" {
   statement {
     sid    = "SearchSuggest"
@@ -39,3 +40,4 @@ resource "aws_cloudsearch_domain_service_access_policy" "this" {
     delete = "40m"
   }
 }
+*/
