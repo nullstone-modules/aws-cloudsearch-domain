@@ -10,6 +10,16 @@ resource "aws_cloudsearch_domain" "this" {
     desired_replication_count = var.instance_count
     desired_partition_count   = var.partition_count
   }
+
+  index_field {
+    name   = "attributes"
+    type   = "text-array"
+    search = false
+    facet  = false
+    return = true
+    sort   = false
+    highlight = true
+  }
 }
 
 data "aws_iam_policy_document" "search_suggest" {
